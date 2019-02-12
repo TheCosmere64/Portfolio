@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AIMS.Views.MasterDetailPages.HomePageDetail"
+             Title="News">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding News}"
+                      VerticalOptions="FillAndExpand"
+                      HasUnevenRows="True"
+                      RefreshCommand="{Binding LoadItemsCommand}"
+                      IsPullToRefreshEnabled="True"
+                      IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                      ItemSelected="ListView_ItemSelected"
+                      SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ContentView Padding="5">
+                                <Frame OutlineColor="#088da5" Padding="10">
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding Title}" FontSize="Small"/>
+                                        <Label Text="{Binding DatePublished}" FontSize="Micro"/>
+                                    </StackLayout>
+                                </Frame>
+                            </ContentView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

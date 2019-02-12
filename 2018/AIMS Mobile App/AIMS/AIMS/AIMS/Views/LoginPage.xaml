@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AIMS.Views.LoginPage">
+    <ContentPage.Content>
+        <ScrollView>
+
+
+            <Grid Padding="5" BackgroundColor="#236192">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="AIMSLogo_NoText_LowRes.png" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" />
+                <Label TextColor="White" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                    Australian Institute of Medical Scientists
+                </Label>
+                <AbsoluteLayout Grid.ColumnSpan="2" Grid.RowSpan="8">
+                    <ActivityIndicator IsEnabled="{Binding LoggingIn}" IsRunning="{Binding LoggingIn}" IsVisible="{Binding LoggingIn}"  
+                                       AbsoluteLayout.LayoutBounds="0.5,0.5,100,100" AbsoluteLayout.LayoutFlags="XProportional,YProportional"/>
+                </AbsoluteLayout>
+                <StackLayout Orientation="Vertical" Margin="10,0,10,0" HorizontalOptions="CenterAndExpand"
+                             WidthRequest="250" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+                    <Entry x:Name="Email" Text="{Binding Email}" Placeholder="Email"
+                           PlaceholderColor="White"
+                           Keyboard="Email" TextColor="White" IsEnabled="{Binding NotLoggingIn}" />
+                    <Entry x:Name="Password" Text="{Binding Password}" Placeholder="Password"
+                           PlaceholderColor="White"
+                           IsPassword="True"
+                           TextColor="White" IsEnabled="{Binding NotLoggingIn}"/>
+                </StackLayout>
+                <Button Command="{Binding LoginCommand}" Text="Log in" TextColor="White"
+                        HorizontalOptions="Center" Grid.Column="0" Grid.ColumnSpan="2"
+                        BackgroundColor="#088da5" Grid.Row="3" WidthRequest="240" IsEnabled="{Binding NotLoggingIn}"/>
+
+                <Button Command="{Binding GuestLoginCommand}" Text="Log in As Guest" TextColor="White"
+                        HorizontalOptions="Center" Grid.Column="0" Grid.ColumnSpan="2"
+                        BackgroundColor="#088da5" Grid.Row="4" WidthRequest="240" IsEnabled="{Binding NotLoggingIn}"/>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Grid.Row="5"
+                             Grid.ColumnSpan="2"  IsEnabled="{Binding NotLoggingIn}">
+                    <StackLayout Orientation="Vertical" >
+                        <Label Text="Add User" TextColor="White"/>
+                        <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand" Margin="0,0"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding NewUserCommand}" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+                    <Label Text="|" />
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Delete All Users" TextColor="White"/>
+                        <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand" Margin="0,0"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding DeleteAllUsersCommand}" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"  IsEnabled="{Binding NotLoggingIn}">
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Register for an Account." TextColor="White" HorizontalTextAlignment="Center"/>
+                        <BoxView HeightRequest="1" Color="White" HorizontalOptions="FillAndExpand" Margin="0,0"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OpenAccountRegister" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

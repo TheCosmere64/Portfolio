@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AIMS.Views.CpdPages.CpdViewEventPage"
+             Title="Event Details">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="5">
+                <Label Text="Short Description:" FontAttributes="Bold" />
+                <Label Text="{Binding ShortDescription}" />
+
+                <BoxView HeightRequest="1" Color="#088da5" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Catagory:" FontAttributes="Bold" />
+                <Label Text="{Binding Catagory}" />
+
+                <BoxView HeightRequest="1" Color="#088da5" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Subcatagory:" FontAttributes="Bold" />
+                <Label Text="{Binding SubCatagory}" />
+
+                <BoxView HeightRequest="1" Color="#088da5" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Further Details:" FontAttributes="Bold" />
+                <Label Text="{Binding FurtherDetails}" />
+
+                <BoxView HeightRequest="1" Color="#088da5" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Long Description:" FontAttributes="Bold" />
+                <Label Text="{Binding LongDescription}" />
+
+                <BoxView HeightRequest="1" Color="#088da5" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Supporting Document:" FontAttributes="Bold" />
+                <Label Text="{Binding DocumentUploadText}" />
+
+                <BoxView HeightRequest="1" Color="#088da5" HorizontalOptions="FillAndExpand"/>
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Quantity:" FontAttributes="Bold" />
+                        <Label Text="{Binding Quantity}"/>
+                    </StackLayout>
+
+                    <BoxView Color="#088da5" WidthRequest="0.3"
+                             VerticalOptions="FillAndExpand" HorizontalOptions="End" />
+
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Points:" FontAttributes="Bold" />
+                        <Label Text="{Binding NumPoints}"/>
+                    </StackLayout>
+
+
+                    <BoxView Color="#088da5" WidthRequest="0.3" VerticalOptions="FillAndExpand" HorizontalOptions="End" />
+
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Date:" FontAttributes="Bold"/>
+                        <Label Text="{Binding DateCompleted, StringFormat='{}{0:ddd, dd MMMM yyyy}'}"/>
+                    </StackLayout>
+
+
+                    <BoxView Color="#088da5" WidthRequest="0.3" VerticalOptions="FillAndExpand" HorizontalOptions="End" />
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Status:" FontAttributes="Bold" />
+                        <Label Text="Unverified"/>
+                    </StackLayout>
+
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Button Clicked="EditButton_Clicked" BorderRadius="3" Text="Edit" HorizontalOptions="FillAndExpand"/>
+                    <Button Clicked="DeleteButton_Clicked" BorderRadius="3" BackgroundColor="#da291c" Text="Delete" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

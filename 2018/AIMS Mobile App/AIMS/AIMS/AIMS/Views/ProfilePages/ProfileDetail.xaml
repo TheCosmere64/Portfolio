@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AIMS.Views.ProfilePages.ProfileDetail"
+             Title="Profile">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10,10,10,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Frame Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" OutlineColor="#236192" HorizontalOptions="Center" Padding="2,2,2,2">
+                        <Image x:Name="ImagePlaceholder" WidthRequest="150" HeightRequest="150"/>
+                    </Frame>
+
+                    <StackLayout Grid.Column="1" Grid.Row="0" HorizontalOptions="FillAndExpand">
+                        <Label Text="Email: " FontAttributes="Bold"/>
+                        <Label x:Name="Email" Text="{Binding Email}" />
+                        <BoxView HeightRequest="1" Color="LightBlue" HorizontalOptions="FillAndExpand" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Column="1"  Grid.Row="1" HorizontalOptions="FillAndExpand">
+                        <Label Text="First Name: " FontAttributes="Bold"/>
+                        <Label x:Name="FirstName" Text="{Binding FirstName}" />
+                        <BoxView HeightRequest="1" Color="LightBlue" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Column="1" Grid.Row="2" HorizontalOptions="FillAndExpand">
+                        <Label Text="Last Name: " FontAttributes="Bold"/>
+                        <Label x:Name="LastName" Text="{Binding LastName}"/>
+                        <BoxView HeightRequest="1" Color="LightBlue" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                </Grid>
+
+                <Label Text="Postal Address Line 1: " FontAttributes="Bold"/>
+                <Label x:Name="PostalAddress1" Text="{Binding PostalAddress1}" />
+                <BoxView HeightRequest="1" Color="LightBlue" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Postal Address Line 2: " FontAttributes="Bold"/>
+                <Label x:Name="PostalAddress2" Text="{Binding PostalAddress2}" />
+                <BoxView HeightRequest="1" Color="LightBlue" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Postal Address Line 3: " FontAttributes="Bold"/>
+                <Label x:Name="PostalAddress3" Text="{Binding PostalAddress3}" />
+                <BoxView HeightRequest="1" Color="LightBlue" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Postal City: " FontAttributes="Bold"/>
+                <Label x:Name="PostalCity" Text="{Binding PostalCity}" />
+                <BoxView HeightRequest="1" Color="LightBlue" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Postal State: " FontAttributes="Bold"/>
+                <Label x:Name="PostalState" Text="{Binding PostalState}" />
+                <BoxView HeightRequest="1" Color="LightBlue" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Postal Postcode: " FontAttributes="Bold"/>
+                <Label x:Name="PostalPostcode" Text="{Binding PostalPostcode}" />
+                <BoxView HeightRequest="1" Color="LightBlue" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Postal Country: " FontAttributes="Bold"/>
+                <Label x:Name="PostalCountry" Text="{Binding PostalCountry}" />
+                <BoxView HeightRequest="2" Color="LightBlue" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Company Name: " FontAttributes="Bold"/>
+                <Label x:Name="CompanyName" Text="{Binding CompanyName}" />
+                <BoxView HeightRequest="1" Color="LightBlue" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Position Title: " FontAttributes="Bold"/>
+                <Label x:Name="PositionTitle" Text="{Binding PositionTitle}" />
+                <BoxView HeightRequest="1" Color="LightBlue" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Work Address Line 1: " FontAttributes="Bold"/>
+                <Label x:Name="WorkAddress1" Text="{Binding WorkAddress1}" />
+                <BoxView HeightRequest="1" Color="LightBlue" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Work Address Line 2: " FontAttributes="Bold"/>
+                <Label x:Name="WorkAddress2" Text="{Binding WorkAddress2}" />
+                <BoxView HeightRequest="1" Color="LightBlue" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Work Address Line 3: " FontAttributes="Bold"/>
+                <Label x:Name="WorkAddress3" Text="{Binding WorkAddress3}" />
+                <BoxView HeightRequest="1" Color="LightBlue" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Work City: " FontAttributes="Bold" />
+                <Label x:Name="WorkCity" Text="{Binding WorkCity}" />
+                <BoxView HeightRequest="1" Color="LightBlue" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Work State: " FontAttributes="Bold"/>
+                <Label x:Name="WorkState" Text="{Binding WorkState}" />
+                <BoxView HeightRequest="1" Color="LightBlue" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Work Postcode: " FontAttributes="Bold"/>
+                <Label x:Name="WorkPostcode" Text="{Binding WorkPostcode}" />
+                <BoxView HeightRequest="1" Color="LightBlue" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Work Country: " FontAttributes="Bold"/>
+                <Label x:Name="WorkCountry" Text="{Binding WorkCountry}" />
+                <BoxView HeightRequest="1" Color="LightBlue" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Home Phone: " FontAttributes="Bold"/>
+                <Label x:Name="HomePhone" Text="{Binding HomePhone}" />
+                <BoxView HeightRequest="1" Color="LightBlue" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Work Phone: " FontAttributes="Bold"/>
+                <Label x:Name="WorkPhone" Text="{Binding WorkPhone}" />
+                <BoxView HeightRequest="1" Color="LightBlue" HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="Mobile: " FontAttributes="Bold"/>
+                <Label x:Name="Mobile" Text="{Binding Mobile}" />
+                <BoxView HeightRequest="2" Color="LightBlue" HorizontalOptions="FillAndExpand"/>
+
+                <Button Text="Edit Profile" Clicked="EditProfileButton" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

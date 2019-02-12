@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AIMS.Views.MembershipPages.MembershipPage"
+             Title="Membership"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Vertical" Grid.Row="0" BackgroundColor="#236192" VerticalOptions="Start">
+                <Label HorizontalOptions="CenterAndExpand" Text="{Binding Title}" TextColor="White" />
+            </StackLayout>
+            <WebView x:Name="webView" Grid.Row="1">
+                <WebView.Source>
+                    <HtmlWebViewSource Html="{Binding Description}" />
+                </WebView.Source>
+            </WebView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

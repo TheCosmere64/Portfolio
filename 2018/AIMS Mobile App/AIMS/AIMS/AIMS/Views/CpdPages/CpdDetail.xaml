@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AIMS.Views.CpdPages.CpdDetail">
+    <ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Add Event" Clicked="AddEventPage" Margin="5,1,5,0" />
+            <ListView ItemsSource="{Binding Activities}"
+                      VerticalOptions="FillAndExpand"
+                      HasUnevenRows="True"
+                      RefreshCommand="{Binding LoadItemsCommand}"
+                      IsPullToRefreshEnabled="True"
+                      IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                      ItemSelected="ListView_ItemSelected"
+                      SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ContentView Padding="5">
+                                <Frame OutlineColor ="#088da5" Padding="10">
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding ShortDescription}" FontAttributes="Bold"/>
+
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="•" TextColor="LightBlue"/>
+                                            <Label Text="{Binding Catagory}"/>
+                                        </StackLayout>
+                                        <BoxView Color="#088da5" HeightRequest="1"/>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{Binding DateCompleted ,  StringFormat='{}{0:ddd, dd MMMM yyyy}'}" HorizontalOptions="StartAndExpand"/>
+                                            <Label Text="Unverified" HorizontalOptions="EndAndExpand"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </ContentView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

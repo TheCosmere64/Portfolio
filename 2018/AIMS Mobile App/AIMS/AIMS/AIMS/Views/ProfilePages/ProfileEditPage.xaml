@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AIMS.Views.ProfilePages.ProfileEditPage"
+             Title="Edit Profile">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10,10,10,0">
+                <Frame OutlineColor="#236192" WidthRequest="150" HeightRequest="150" HorizontalOptions="Center" Padding="2,2,2,2">
+                    <Image x:Name="ImagePlaceholder" WidthRequest="150" HeightRequest="150"/>
+                </Frame>
+                <Button x:Name="UploadFileButton" Clicked="UploadFileButton_Clicked" Text="Upload Image" />
+
+                <Label Text="*Email:"/>
+                <Entry x:Name="Email" Placeholder="Email" Text="{Binding Email}" />
+
+                <Label Text="*First Name:"/>
+                <Entry x:Name="FirstName" Placeholder="First Name" Text="{Binding FirstName}" />
+
+                <Label Text="*Last Name:"/>
+                <Entry x:Name="LastName" Placeholder="Last Name" Text="{Binding LastName}" />
+
+                <Label Text="Postal Address Line 1:"/>
+                <Entry x:Name="PostalAddress1" Placeholder="Postal Address Line 1" Text="{Binding PostalAddress1}" />
+
+                <Label Text="Postal Address Line 2:"/>
+                <Entry x:Name="PostalAddress2" Placeholder="Postal Address Line 2" Text="{Binding PostalAddress2}" />
+
+                <Label Text="Postal Address Line 3:" />
+                <Entry x:Name="PostalAddress3" Placeholder="Postal Address Line 3" Text="{Binding PostalAddress3}" />
+
+                <Label Text="Postal City:" />
+                <Entry x:Name="PostalCity" Placeholder="Postal City" Text="{Binding PostalCity}" />
+
+                <Label Text="Postal State:"/>
+                <Entry x:Name="PostalState" Placeholder="Postal State" Text="{Binding PostalState}" />
+
+                <Label Text="Postal Postcode:" />
+                <Entry x:Name="PostalPostcode" Placeholder="Postal Postcode" Text="{Binding PostalPostcode}" />
+
+                <Label Text="Postal Country:" />
+                <Entry x:Name="PostalCountry" Placeholder="Postal Country" Text="{Binding PostalCountry}" />
+
+                <Label Text="Company Name:" />
+                <Entry x:Name="CompanyName" Placeholder="Company Name" Text="{Binding CompanyName}" />
+
+                <Label Text="Position Title:" />
+                <Entry x:Name="PositionTitle" Placeholder="Position Title" Text="{Binding PositionTitle}" />
+
+                <Label Text="Work Address Line 1:" />
+                <Entry x:Name="WorkAddress1" Placeholder="Work Address Line 1" Text="{Binding WorkAddress1}" />
+
+                <Label Text="Work Address Line 2:" />
+                <Entry x:Name="WorkAddress2" Placeholder="Work Address Line 2" Text="{Binding WorkAddress2}" />
+
+                <Label Text="Work Address Line 3:" />
+                <Entry x:Name="WorkAddress3" Placeholder="Work Address Line 3" Text="{Binding WorkAddress3}" />
+
+                <Label Text="Work City:"/>
+                <Entry x:Name="WorkCity" Placeholder="Work City" Text="{Binding WorkCity}" />
+
+                <Label Text="Work State:"/>
+                <Entry x:Name="WorkState" Placeholder="Work State" Text="{Binding WorkState}" />
+
+                <Label Text="Work Postcode:"/>
+                <Entry x:Name="WorkPostcode" Placeholder="Work Postcode" Text="{Binding WorkPostcode}" />
+
+                <Label Text="Work Country:"/>
+                <Entry x:Name="WorkCountry" Placeholder="Work Country" Text="{Binding WorkCountry}" />
+
+                <Label Text="Home Phone:"/>
+                <Entry x:Name="HomePhone" Placeholder="Home Phone" Text="{Binding HomePhone}" />
+
+                <Label Text="Work Phone:"/>
+                <Entry x:Name="WorkPhone" Placeholder="Work Phone" Text="{Binding WorkPhone}" />
+
+                <Label Text="Mobile:"/>
+                <Entry x:Name="Mobile" Placeholder="Mobile" Text="{Binding Mobile}" />
+
+
+                <Button Text="Submit" BackgroundColor="Green" Command="{Binding SubmitCommand}" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

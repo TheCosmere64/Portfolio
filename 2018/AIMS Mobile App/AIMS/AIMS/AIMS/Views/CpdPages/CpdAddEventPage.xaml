@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AIMS.Views.CpdPages.CpdAddEventPage"
+             Title="Add Event">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10,10,10,10">
+                <Label Text="*Catagory:" />
+
+                <Picker x:Name="Catagory"
+                        HorizontalOptions="FillAndExpand"
+                        ItemsSource="{Binding Catagories}"
+                        SelectedIndex="{Binding CatagorySelectedIndex}"
+                        SelectedIndexChanged="CatagoryChanged"
+                        Title="Catagory" />
+
+                <Label Text="*Subcatagory:"/>
+                <Picker x:Name="SubCatagory"
+                        HorizontalOptions="FillAndExpand"
+                        IsEnabled="False"
+                        SelectedIndexChanged="SubCatagoryChanged"
+                        Title="Subcatagory (Select a Catagory First)" />
+                <Label x:Name="CatagoryDescription" Text="{Binding SubCatagoryDescription}" />
+
+                <Label Text="*Short Description:"/>
+                <Entry x:Name="ShortDescription" Placeholder="Short Description" Text="{Binding ShortDescription}" />
+
+                <Label Text="*Date Completed:"/>
+                <DatePicker x:Name="DateCompleted" Format="dd MMM yyyy" Date="{Binding DateCompleted}" />
+
+                <Label Text="Further Details:" />
+                <Entry x:Name="FurtherDetails" Placeholder="Further Details" Text="{Binding FurtherDetails}" />
+
+                <Label Text="{Binding QuantityType}" />
+                <Entry x:Name="Quantity" Keyboard="Numeric" Placeholder="Quantity" Text="{Binding Quantity}" />
+
+                <Label Text="*Long Description:"/>
+                <Entry x:Name="LongDescription" Placeholder="Long Description" Text="{Binding LongDescription}" />
+
+                <Label x:Name="EvidenceLable" Text="Evidence Form - Can Be Added Later"/>
+
+                <Label x:Name="DocumentTitleLable" Text="{Binding DocumentUploadText}" />
+                <Button x:Name="UploadFileButton" Clicked="UploadFileButton_Clicked" Text="Upload File" />
+                <Label x:Name="SuportedLabel">
+                    Supporting Documents Include:
+                    -Scan Of Certificate
+                    -Attendance Slip
+                </Label>
+
+                <Button Text="Submit" BackgroundColor="#00FA9A" Command="{Binding SubmitCommand}" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
