@@ -1,0 +1,252 @@
+html{  
+    background-repeat: no-repeat;
+    overflow: auto;
+    background-size:cover;
+}
+
+main{
+    overflow: hidden;
+    overflow: auto;
+}
+
+.home-bg{
+    background-image: url(pavlova-sliced.jpg);
+}
+
+.recipe-bg{
+    background-image: url(pavlova-pie.jpg); 
+}
+
+.hist-bg{
+    background-image: url(pavlova-small.jpg); 
+}
+
+.link-bg{
+    background-image: url(christmas_pavlova.jpg); 
+}
+
+.home-bg .bar a{
+    font-size: 50px;
+}
+
+.home-bg header{
+    padding: 20px;
+}
+
+p{
+   margin: 10px; 
+}
+
+header{
+    background-color: rgba(40,70,180,0.5);
+    border-radius: 10px;
+}
+
+header a{
+    letter-spacing:30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-family:cursive;
+    font-weight: lighter;
+    color:white;
+    font-size: 50px;
+    color: white;
+    margin: auto;
+    margin-left: 35px;
+}
+
+.top{   
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(100,190,340,0.8);
+    border-radius: 10px;
+}
+
+.bar{    
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+.bar a{ 
+    text-decoration:none;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 70px;
+    margin-right: 70px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    color:white;
+    font-family: cursive;
+}
+
+.home-bg footer .bar{
+    padding-left: none;
+    margin-left: none;
+    background-color: rgba(0,0,0,0);
+}
+
+.home-bg .bar a{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.recipe:hover, .hist:hover, .home:hover{
+    text-decoration: underline;
+    text-decoration-color: white; 
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 10px;
+}
+
+a.home-this{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-image: url(bgl.png);
+    background-size: cover;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 10px;
+}
+
+a.recipe-this{
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-image: url(bgm.png);
+    background-size: cover;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 10px;
+}
+
+a.hist-this{
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-image: url(bgr.png);
+    background-size: cover;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 10px;
+}
+
+.subject{
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    overflow: auto;
+    background-color: rgba(40,70,180,0.5);
+    border-radius: 10px;
+    font-family: cursive;
+}
+
+li{ 
+    text-align: left;
+}
+
+.comments{
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.comments div{
+    padding: 10px;
+    border: 4px solid rgb(0,0,0);
+    background-color: rgb(200,200,250);
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+    overflow:auto;
+    background-color: rgba(255,255,255,0.8);
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.content img{
+    float:left;
+    margin-right: 25px;
+    width: 40%;
+    margin-bottom: 100px;
+}
+
+.content p{
+    padding-top: 0;
+    margin: 20px;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+.content li{
+    margin-top: 10px;   
+    font-size: 24px;
+    font-family: cursive;
+    text-align: center;
+    list-style:none;
+    padding-bottom:auto;
+}
+
+content ul{
+    
+    margin-bottom: 0;
+}
+
+.content h1{
+    margin: 0;
+    font-family:fantasy;
+    font-size: 40px;
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+.home-bg footer{ 
+    margin-top: 15%;
+}
+
+footer a{
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-decoration:none;
+    color: white;
+    background-color: rgba(100,190,360,0.9);
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+footer a:hover{
+    background-color: rgba(100,100,250,0.8);
+    text-decoration: underline;
+    text-decoration-color: color;
+}
+
+.home-bg footer a:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+
+img{
+    overflow: auto;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+img.center{
+    padding-top: 20px;
+    margin: auto;
+}
+
+span{
+    font-size: 20px;
+    font-weight: bolder;
+    display: block;
+}
