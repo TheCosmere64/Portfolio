@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.companyname.AIMS" android:installLocation="auto" android:versionName="3.3" android:versionCode="6">
+	<uses-sdk android:minSdkVersion="23" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<application android:label="AIMS" android:icon="@drawable/AIMSLogo_NoText_LowRes"></application>
+</manifest>

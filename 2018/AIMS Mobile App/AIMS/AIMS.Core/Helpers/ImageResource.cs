@@ -1,0 +1,26 @@
+﻿#region
+
+using System;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+#endregion
+
+namespace AIMS.Core.Helpers
+{
+    public class ImageResource : IMarkupExtension
+    {
+        public string Source { get; set; }
+
+        public object ProvideValue(IServiceProvider serviceProvider)
+        {
+            if (Source == null)
+            {
+                return null;
+            }
+
+            var imageSource = ImageSource.FromResource(Source);
+            return imageSource;
+        }
+    }
+}
